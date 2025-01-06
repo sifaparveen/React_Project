@@ -1,34 +1,7 @@
-const dynamicWord = ["Fundamentals", "Core", "Main"];
+import Header from "./Components/Header.jsx";
+import CoreConcept from "./Components/CoreConcept.jsx";
 
-import CoreImg from "./assets/react-core-concepts.png";
 import { CORE_CONCEPTS } from "./data.js";
-
-function random(Max) {
-  return Math.floor(Math.random() * (Max + 1));
-}
-
-function Header() {
-  return (
-    <header>
-      <img src={CoreImg} alt="Stylized atom" />
-      <h1>React Essentials</h1>
-      <p>
-        {dynamicWord[random(2)]} React concepts you will need for almost any app
-        you are going to build!
-      </p>
-    </header>
-  );
-}
-
-function CoreConcept(props) {
-  return (
-    <li>
-      <img src={props.image} alt={props.title} />
-      <h2>{props.title}</h2>
-      <p>{props.description}</p>
-    </li>
-  );
-}
 
 function App() {
   return (
